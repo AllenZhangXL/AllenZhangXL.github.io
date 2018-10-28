@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Git,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="在学习了廖雪峰老师的Git讲解之后，我知道了Git的发展过程，以及Git的基本用法。更加深入的明白了GIthub，Git 之间的关系。下面是我在学习廖雪峰老师的课程时，自己的一些总结。   创建版本库输入下面命令创建版本库：$mkdir nameofku$cd nameofku$pwd  将这个目录变成可以管理的仓库：$git init  添加文件到仓库：$git add nameOfFile">
+<meta name="keywords" content="Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git 学习总结">
+<meta property="og:url" content="http://yoursite.com/2018/10/24/Git学习总结/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在学习了廖雪峰老师的Git讲解之后，我知道了Git的发展过程，以及Git的基本用法。更加深入的明白了GIthub，Git 之间的关系。下面是我在学习廖雪峰老师的课程时，自己的一些总结。   创建版本库输入下面命令创建版本库：$mkdir nameofku$cd nameofku$pwd  将这个目录变成可以管理的仓库：$git init  添加文件到仓库：$git add nameOfFile">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-28T15:41:00.547Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Git 学习总结">
+<meta name="twitter:description" content="在学习了廖雪峰老师的Git讲解之后，我知道了Git的发展过程，以及Git的基本用法。更加深入的明白了GIthub，Git 之间的关系。下面是我在学习廖雪峰老师的课程时，自己的一些总结。   创建版本库输入下面命令创建版本库：$mkdir nameofku$cd nameofku$pwd  将这个目录变成可以管理的仓库：$git init  添加文件到仓库：$git add nameOfFile">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2018/10/24/Git学习总结/">
 
 
 
 
 
-  <title>Hexo</title>
+  <title>Git 学习总结 | Hexo</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -234,9 +238,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -266,9 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/24/Git学习总结/" itemprop="url">Git 学习总结</a></h1>
+          <h1 class="post-title" itemprop="name headline">Git 学习总结</h1>
         
 
         <div class="post-meta">
@@ -340,23 +342,107 @@
       
 
       
-        
-          
-          在学习了廖雪峰老师的Git讲解之后，我知道了Git的发展过程，以及Git的基本用法。更加深入的明白了GIthub，Git 之间的关系。下面是我在学习廖雪峰老师的课程时，自己的一些总结。
+        <p>在学习了<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743256916071d599b3aed534aaab22a0db6c4e07fd0000" target="_blank" rel="noopener">廖雪峰老师的Git讲解</a>之后，我知道了Git的发展过程，以及Git的基本用法。更加深入的明白了GIthub，Git 之间的关系。<br>下面是我在学习廖雪峰老师的课程时，自己的一些总结。</p>
+<hr>
+<ol>
+<li><p>创建版本库<br>输入下面命令创建版本库：<br><code>$mkdir nameofku</code><br><code>$cd nameofku</code><br><code>$pwd</code></p>
+</li>
+<li><p>将这个目录变成可以管理的仓库：<br><code>$git init</code></p>
+</li>
+<li><p>添加文件到仓库：<br><code>$git add nameOfFile</code></p>
+</li>
+<li><p>提交<br><code>$git commit -m &quot;备注操作&quot;</code></p>
+</li>
+</ol>
+<p>每次对文件的修改都要执行 add 和 commit 操作<br><code>$git status</code> 显示仓库当前状态<br><code>$git diff nameOfFile</code> 显示文件修改前后的不同</p>
+<hr>
+<p>##Git 版本回退</p>
+<ul>
+<li><code>$git log</code> 查看所有 commit -m 的信息（修改时间，内容，被谁修改）</li>
+</ul>
+<p>git 版本退回是根据 <em>commit id</em>  进行， <code>$git log</code> 可以查看commit id </p>
+<hr>
+<p>##工作区和暂存区</p>
+<p>工作区使我们电脑可以看到的目录</p>
+<p>暂存区使我们看不到的 .git 隐藏目录，是git的版本库<br>git版本库中存了很多文件，主要是Stage（暂存区），以及git为我们自动创建的第一个分支master，以及指向master的一个指针HEAD。<br>做任何修改的时候，先要<em>git add</em> 将修改提交到暂存区，<br>第二步，<em> git commit </em> 将暂存区的内容提交到当前分支。</p>
+<hr>
+<p>##撤销修改</p>
+<ul>
+<li>场景1：改乱了工作区的某个文件内容，想直接恢复之前的内容， 使用命令 <code>$git checkout --fileName</code></li>
+<li>场景2：改乱了工作区的文件内容，而且还提交到了暂存区， 分为两步：<ol>
+<li><code>$git reset HEAD &lt;fileName&gt;</code> ，回到场景1，</li>
+<li>执行场景1的操作。</li>
+</ol>
+</li>
+<li>场景3：已经将错误的文件提交到版本库时，需要执行上面版本回退的操作。</li>
+</ul>
+<hr>
+<p>##删除文件</p>
+<p>删除也是一个修改操作，在本地文件管理器中使用 <code>rm</code> 删除文件<br>这是工作区和版本库不一致， <code>git status</code> 查看会告诉那些文件不一致、<br>如果确认删除， 使用 <code>git rm fileName</code> &amp; <code>git commit</code><br>误删，则使用 <code>git checkout --fileName</code> 恢复</p>
+<hr>
+<p>##远程仓库GITHUB</p>
+<p>GITHUB是远程仓库，用于备份和与其他人分享。</p>
+<ol>
+<li>注册github账号</li>
+<li>创建SSH Key<br> 打开git bash–&gt; <code>$ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code><br> 一路回车，在.ssh 目录中找到 id_rsa（私钥） 和 id_rsa.pub(公钥)。</li>
+<li>登录github，account settings–&gt; ssh keys 添加 SSH key 将公钥复制，并保存。</li>
+</ol>
+<hr>
+<p>##添加仓库</p>
+<ol>
+<li>登录github –&gt; ceate a new repo</li>
+<li>本地仓库下<br> <code>$git remote add origin git@github.com:username/repoName.git</code></li>
+<li>推送本地内容<br> <code>$git push -u origin master</code><br> 将本地内容推送到github，因为是第一次推送，所以要加 -u 参数。<br> 之后的推送可以 <code>$git push origin master</code></li>
+</ol>
+<hr>
+<p>##从远程库克隆</p>
+<p>如何将很多线上项目搬到本地：克隆<br>使用命令：<br>    <code>$git clone git@github.com:uesrname/repo-name.git</code><br>    将远程仓库克隆到本地。<br>git支持多种协议，默认的git：//使用ssh， 也可使用https等协议。<br>https速度慢，每次推送都要输入口令，<br>ssh支持原生git协议，速度最快。</p>
+<hr>
+<p>##创建于合并分支</p>
+<p>创建分支dev，并切换到分支dev：<br><code>$git checkout -b dev</code> -b 表示创建并切换<br><code>$git branck</code> 查看当前分支<br><code>$git checkout branchName</code> 切换分支<br><code>$git merge branch1</code> 将 branch1 的内容合并到 当前分支上<br><code>$git branch -d branchName</code> 删除分支</p>
+<hr>
+<p>##分支管理策略</p>
+<p>不使用Fast forward 模式， git 会在merge时生成新的commit，这样就可以从分支历史记录上看出分支的信息。<br><code>$git merge --no-ff -m &quot;merge with no-ff&quot; BranchName</code></p>
+<hr>
+<p>##Bug分支</p>
+<p>Git可以为每个Bug创建一个解决branch，解决后，merge，并删除临时的branch。<br><code>$git stath</code> 将现在的工作现场保存，等修改完bug之后回到现场继续工作。</p>
+<ol>
+<li>切换到bug分支 -&gt; <code>$git checkout bug1Branch</code></li>
+<li>创建并切换到临时解决bug1的分支 -&gt; <code>$git checkout -b issue-101</code><br> 在当前分支上解决bug，然后合并</li>
+<li><code>$git merge --no-ff -m&quot;merge bug fix 101&quot; issue-101</code></li>
+<li>切换回之前的工作的分支 <code>$git checkout workBranch</code><br> 查看工作现场 <code>git stash list</code></li>
+<li>恢复工作现场使用 <code>$git stash pop</code><br> 也可以使用 <code>$git stash apply</code> 恢复现场但不删除保存的现场， 需要<code>$git stash drop</code> 删除</li>
+</ol>
+<hr>
+<p>##Feature 分支</p>
+<p>软件开发中，为了保证主分支，不被其他新功能分支的试验性代码搞乱，我们在添加新功能的时候，就要创建新的分支。<br>利用上面说到的创建分支的命令，创建功能分支。<br>如果在功能完成，合并时，不需要新的功能，则删除功能分支：<br><code>$git branch -d Branch1</code><br><code>$git branch -D Branch1</code>强制删除</p>
+<hr>
+<p>##多人协作</p>
+<p>多人协作的工作模式是这样：</p>
+<ol>
+<li>首先，试图视同<code>$git push origin branch-name</code>推送自己的修改</li>
+<li>如果推送失败，可能因为远程分支比本地更新，需要<code>$git pull</code> 试图合并：</li>
+<li>如果合并有冲突，则需要手动解决，并在本地提交；</li>
+<li>没有冲突或者解决掉冲突后，再用<code>git push origin branch-name</code>推送就能成功！</li>
+</ol>
+<p>如果 git pull 提示 <em> no tracking information </em> 说明本地分支和远程分支的链接关系没有建立， 使用命令 <code>$git branch --set-upstream-to=origin/Branch-name Branch-name</code></p>
+<hr>
+<p>##标签管理</p>
+<p>发布一个版本时，我们通常先在版本库中打一个标签（tag），这样，就唯一确定了打标签时刻的版本。将来无论什么时候，取某个标签的版本，就是把那个打标签的时刻的历史版本取出来。所以，标签也是版本库的一个快照。<br>Git的标签虽然是版本库的快照，但其实他就是指向某个commit 的指针，因此创建和删除标签都是瞬间的。<br>tag实际就是一个让人容易记住的有意义的名字，他跟commit绑定在一起。</p>
+<ol>
+<li>切换到需要打标签的分支 <code>$git checkout branch1</code> </li>
+<li>打标签 <code>$git tag v1.0</code></li>
+<li>查看标签 <code>$git tag</code></li>
+</ol>
+<p>如果要对之前的 commit 打标签， 则需要找到对应得commit id 然后打标签<br>比如对 f12345 打标签<br><code>$git tag v0.9 f12345</code></p>
+<p>还可以创建带有说明的git tag<br><code>$git tag -a v0.1 -m &quot;version 0.1 released&quot; f12345</code></p>
+<p>使用命令<code>$git show &lt;tagname&gt;</code> 看到文字说明</p>
+<p>###操作标签</p>
+<p>命令<code>git push origin &lt;tagname&gt;</code>可以推送一个本地标签；</p>
+<p>命令<code>git push origin --tags</code>可以推送全部未推送过的本地标签；</p>
+<p>命令<code>git tag -d &lt;tagname&gt;</code>可以删除一个本地标签；</p>
+<p>命令<code>git push origin :refs/tags/&lt;tagname&gt;</code>可以删除一个远程标签。</p>
 
-
-创建版本库输入下面命令创建版本库：$mkdir nameofku$cd nameofku$pwd
-
-将这个目录
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/24/Git学习总结/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
     
@@ -371,162 +457,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/17/转移Hexo到Github实现任何电脑都可管理博客/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="AllenZXL">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/17/转移Hexo到Github实现任何电脑都可管理博客/" itemprop="url">转移Hexo到Github实现任何电脑都可管理博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-17T21:59:01+02:00">
-                2018-10-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Git/" rel="tag"># Git</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          我们已经通过Github，Hexo完成了Hexo博客的搭建，但是当我们更换电脑，或者想用其他电脑管理博客的时候，就会比较麻烦；又或者我们Hexo本地文件丢失之后，整个Hexo生成网站的原始文件就都会丢失。所以，在看了廖雪峰老师的Git讲解之后,总和知乎大神的示范，决定写这个教程，帮助和我一样的小白把
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/17/转移Hexo到Github实现任何电脑都可管理博客/#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/17/转移Hexo到Github实现任何电脑都可管理博客/" rel="next" title="转移Hexo到Github实现任何电脑都可管理博客">
+                <i class="fa fa-chevron-left"></i> 转移Hexo到Github实现任何电脑都可管理博客
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -536,10 +496,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -547,6 +508,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -798,6 +763,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
